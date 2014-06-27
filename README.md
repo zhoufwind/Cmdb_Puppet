@@ -1,4 +1,4 @@
-puppet_example
+Cmdb_Puppet
 ==============
 
 puppet code examples
