@@ -1,4 +1,4 @@
-#!/home/python/bin/python
+#!/usr/bin/env python
 #-*- coding:utf-8 -*-
 
 from subprocess import PIPE, Popen
@@ -36,7 +36,7 @@ def parserMemInfo(memdata):
             pd[k.strip()] = v.strip()
         #print pd       # output JSON format dict now, contains all infos
         if pd['Size'] != 'No Module Installed': # if memory be installed at this slot
-            mem_info = 'Size: %s; Part_Number: %s; Manufacturer: %s; Locator: %s; Serial_Number: %s' % (pd['Size'], pd['Part Number'], pd['Manufacturer'], pd['Locator'], pd['Serial Number'])
+            mem_info = 'Size: %s; Part_Number: %s; Manufacturer: %s' % (pd['Size'], pd['Part Number'], pd['Manufacturer'])
             #print mem_info     # output JSON format dict, which only print installed memory
             for line in mem_info.split('\n'):
                 for word in line.split(';'):
