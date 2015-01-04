@@ -22,7 +22,7 @@ def parserDMI(dmidata):
             pd[k] = v
         else:
             line_in = False
-    name = "Manufacturer: %s; Product_Name: %s; Serial_Number: %s; UUID: %s." % (pd['Manufacturer'], pd['Product Name'], pd['Serial Number'], pd['UUID'])
+    name = "Manufacturer: %s; Product_Name: %s; Serial_Number: %s; UUID: %s" % (pd['Manufacturer'], pd['Product Name'], pd['Serial Number'], pd['UUID'])
     for i in name.split(';'):
         k, v = [j.strip() for j in i.split(':')]
         fd[k] = v

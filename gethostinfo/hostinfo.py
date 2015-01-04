@@ -4,15 +4,15 @@
 import platform
 
 def getHostInfo():
-        pd = {}
-        os_name = platform.node()
-        os_release = platform.release()
-        version = platform.dist()
-        os_version = '%s %s' % (version[0], version[1])
-        pd['os_name'] = os_name
-        pd['os_release'] = os_release
-        pd['os_version'] = os_version
-        return pd
+    pd = {}
+    os_name = platform.node()
+    os_release = platform.release()
+    version = platform.dist()
+    os_version = '%s %s' % (version[0], version[1])
+    pd['os_name'] = os_name
+    pd['os_release'] = os_release
+    pd['os_version'] = os_version
+    return pd
 
 if __name__ == '__main__':
         print getHostInfo()
